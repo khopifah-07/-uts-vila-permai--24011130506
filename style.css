@@ -1,0 +1,270 @@
+/* Reset & Style Dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f7f6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header & Navigasi */
+.header {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.header__title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.nav {
+  background-color: #1d4ed8;
+  padding: 0.75rem 0;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.75;
+}
+
+/* Section Main */
+.section {
+  margin: 2rem 0;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+/* Grid Vila - 3 Kolom Sejajar Samping */
+.villa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+.villa-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.villa-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.villa-card__title {
+  color: #064e3b; /* Warna Hijau Tua Gelap */
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.villa-card p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.villa-card__price {
+  font-weight: bold;
+  color: #b91c1c; /* Warna Merah */
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+
+.villa-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  background-color: #dcfce7;
+  color: #15803d;
+  margin-top: auto;
+}
+
+/* Status jika Penuh / Tidak Tersedia */
+.villa-card__badge--full {
+  background-color: #ffe4e6;
+  color: #be123c;
+}
+
+/* Formulir Pemesanan */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.price-summary {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.price-summary__total {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn--primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn--secondary {
+  background-color: #6b7280;
+  color: #ffffff;
+  margin-right: 0.5rem;
+}
+
+.btn--secondary:hover {
+  background-color: #4b5563;
+}
+
+.alert--error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.result-card {
+  border: 2px solid #2563eb;
+  padding: 1.25rem;
+  border-radius: 6px;
+  background-color: #eff6ff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsif untuk Layar HP dan Tablet */
+@media (max-width: 992px) {
+  .villa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .villa-grid {
+    grid-template-columns: 1fr;
+  }
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
